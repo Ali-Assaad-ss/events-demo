@@ -1,0 +1,370 @@
+/* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+body,
+h1,
+form {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 90%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.couples-names {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#events {
+  width: 90%;
+  margin-block: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  /* background-color: #baaf11ab; */
+  background-color: #baaf11ab;
+  color: #3b3e19;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #726c11ab;
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+select {
+  width: 100%;
+  /* Full width */
+  padding: 10px;
+  /* Spacing */
+  font-size: 14px;
+  /* Text size */
+  border: 1px solid #ccc;
+  /* Border color */
+  border-radius: 5px;
+  /* Rounded corners */
+  background-color: #fff;
+  /* Background */
+  color: #333;
+  /* Text color */
+  appearance: none;
+  /* Remove default styling for consistency */
+  cursor: pointer;
+  /* Pointer cursor */
+  outline: none;
+  /* Remove focus outline */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover and focus state */
+select:hover,
+select:focus {
+  border-color: #4caf50;
+  /* Green border on hover/focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  /* Soft green glow */
+}
+
+/* Option styling */
+select option {
+  font-size: 14px;
+  /* Option font size */
+  padding: 10px;
+  /* Spacing */
+  background-color: #fff;
+  /* Background for options */
+  color: #333;
+  /* Text color */
+}
+
+/* Optional: Add a custom dropdown arrow */
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%234CAF50' d='M5 6L0 0h10L5 6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Create a custom checkbox */
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  /* White background */
+  border: 2px solid #ccc;
+  /* Border color */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor */
+  transition: all 0.3s ease;
+  /* Smooth transitions */
+}
+
+/* Hover state */
+.custom-checkbox:hover {
+  border-color: #baaf11ab;
+  /* Green border on hover */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  /* Soft glow */
+}
+
+/* Checked state */
+input[type="checkbox"]:checked + .custom-checkbox {
+  background-color: #baaf11ab;
+  /* Green background */
+  border-color: #baaf11ab;
+  /* Match the border with the background */
+}
+
+/* Add the checkmark */
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  top: 1px;
+  left: 6px;
+  transform: rotate(45deg);
+  opacity: 0;
+  /* Hide initially */
+  transition: opacity 0.3s ease;
+  /* Smooth appearance */
+}
+
+/* Show checkmark when checked */
+input[type="checkbox"]:checked + .custom-checkbox::after {
+  opacity: 1;
+  /* Show checkmark */
+}
+.eventdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ccc;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(230, 230, 250, 0.3);
+  margin-block: 10px;
+}
+
+/* Container for the background image previews */
+.background-preview-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* Style for each image frame */
+.img-frame {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(230, 230, 250, 0.3);
+}
+
+/* Style for the images inside the frames */
+.img-frame img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* Ensures the image fits the frame */
+}
+
+/* Style for the close (X) button */
+.close-btn {
+  position: absolute;
+  top: 10px; /* Adjust to create some spacing from the top */
+  right: 10px; /* Adjust to create some spacing from the right */
+  width: 20px; /* Set the diameter of the circle */
+  height: 20px; /* Set the diameter of the circle */
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Makes the button circular */
+  display: flex;
+  align-items: center; /* Centers the text inside the circle */
+  justify-content: center; /* Centers the text inside the circle */
+  font-size: 12px; /* Adjust font size for a smaller look */
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+}
+
+.file-upload {
+  display: none; /* Hide the default file input */
+}
+
+/* Style the custom label which will act as the 'button' */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #baaf11ab;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Style the custom label on hover */
+.custom-file-upload:hover {
+  background-color: #726c11ab;
+}
+
+/* Style the span inside the label for custom text */
+.custom-file-upload span {
+  display: inline-block;
+  padding: 5px;
+  font-weight: bold;
+}
+
+/* Add a custom style for the uploaded file (optional) */
+.custom-file-upload span:before {
+  content: "📂"; /* Optional: Add an icon before the text */
+  margin-right: 10px;
+}
+
+/* Optional: Style for showing the file name after selecting a file */
+.file-name {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+#quote-container {
+  width: 100%;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="sofia"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="sofia"]::before {
+  content: "Sofia";
+  font-family: "Sofia", sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="slabo"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="slabo"]::before {
+  content: "Slabo";
+  font-family: "Slabo", serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="roboto"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="roboto"]::before {
+  content: "Roboto";
+  font-family: "Roboto", sans-serif;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="inconsolata"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="inconsolata"]::before {
+  content: "Inconsolata";
+  font-family: "Inconsolata", monospace;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="ubuntu"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="ubuntu"]::before {
+  content: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
+}
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="cursive"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="cursive"]::before {
+  content: "cursive";
+  font-family: "Dancing Script", cursive;
+}
+
+/* Apply fonts to content */
+.ql-font-sofia {
+  font-family: "Sofia", sans-serif;
+}
+.ql-font-slabo {
+  font-family: "Slabo", serif;
+}
+.ql-font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+.ql-font-inconsolata {
+  font-family: "Inconsolata", monospace;
+}
+.ql-font-ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
+.ql-font-cursive {
+  font-family: "Dancing Script", cursive;
+}
+
+
+.ql-snow .ql-picker.ql-size .ql-picker-label::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  content: attr(data-value);
+}

@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../event/images/flower.jpg") no-repeat center center fixed;
+  background-size: cover; /* Ensures the image covers the entire screen */
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+}
+
+#right {
+  border-radius: 12px; /* Rounded corners for a natural feel */
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  width: 360px;
+  margin-right: 20px;
+  margin-top: 120px;
+  position: sticky;
+  top: 0; /* Sticks to the top of the viewport */
+  align-self: flex-start; /* Ensures it aligns properly in flexbox */
+}
+#left {
+  border-radius: 12px; /* Rounded corners for a natural feel */
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  margin: 20px;
+  margin-top: 100px;
+  max-width: 800px;
+  padding: 20px;
+}
+
+iframe {
+  width: 360px;
+  height: 700px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  #right {
+    display: none; /* Hide the #right div on small screens */
+  }
+}

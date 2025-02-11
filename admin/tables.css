@@ -1,0 +1,83 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("../event/images/flower.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #333;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+#search-weddings {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f8f9fa;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.action-links a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.action-links a:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  /* background-color: #baaf11ab; */
+  background-color: #baaf11ab;
+  color: #3b3e19;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 600;
+
+  transition: background-color 0.3s;
+}
