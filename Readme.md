@@ -57,10 +57,8 @@ This system provides a seamless and efficient way to manage events and track att
 ![RSVP Interface](images/5.png)
 
 ### 🎥 Live Demo video – How it Works
-<video width="600" controls>
-  <source src="images/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Watch the Demo Video](images/demo.mp4)
+
 
 ## 📜 License
 
