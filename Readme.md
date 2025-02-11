@@ -56,8 +56,11 @@ This system provides a seamless and efficient way to manage events and track att
 ### 📩 RSVP Process (Attendee Experience)
 ![RSVP Interface](images/5.png)
 
-### 🎥 Live Demo GIF – How it Works
-![Demo GIF](images/demo.mp4)
+### 🎥 Live Demo video – How it Works
+<video width="600" controls>
+  <source src="images/demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## 📜 License
 
